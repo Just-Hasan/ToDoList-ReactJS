@@ -193,3 +193,11 @@ body {
   column-gap: 1.2rem;
   grid-template-columns: 1fr 1fr;
 }
+
+/*
+/////////////////////////////[Check Icon]
+*/
+
+.check-icon {
+  font-size: 2.4rem;
+}

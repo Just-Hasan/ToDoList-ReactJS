@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { LuPencil, LuTrash } from "react-icons/lu";
+import {
+  RiCheckboxBlankCircleLine,
+  RiCheckboxCircleFill,
+} from "react-icons/ri";
 
 /////////////////////////////////////[List Component]
 
@@ -42,13 +46,14 @@ export function List({
         </span>
       )}
       <div className="todo-list-actions">
-        <input
-          type="checkbox"
-          className="custom-checkbox"
-          onChange={() => {
-            onCheckToDoList(todoItems.id);
-          }}
-        ></input>
+        <button onClick={() => onCheckToDoList(todoItems.id)}>
+          {todoItems.check ? (
+            <RiCheckboxCircleFill className="check-icon" />
+          ) : (
+            <RiCheckboxBlankCircleLine className="check-icon checked" />
+          )}
+        </button>
+
         <button
           onClick={() => {
             setEdit(() => !edit);
