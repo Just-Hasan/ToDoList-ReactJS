@@ -23,7 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.2rem;
-
+  border-radius: 8px;
   width: 500px;
   background-color: var(--dark-color);
 }
@@ -40,13 +40,27 @@ body {
 .todo-input-field {
   border: none;
   padding: 1rem;
-  border: 0.5px solid rgba(51, 51, 51, 0.467);
+  background-color: transparent;
+  border: 0.5px solid #60d6ff;
+  color: #60d6ff;
+  font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+}
+
+.todo-input-field:active {
+  border: 1px solid #60d6ff;
+  outline: none;
+}
+
+.todo-input-field::placeholder {
+  color: #60d7ff75;
 }
 
 .todo-input-button,
 .todo-list-done-task button {
   border: 1px solid black;
+  border-radius: 4px;
   padding: 1rem;
   color: var(--dark-color);
   font-size: 1.6rem;
@@ -81,8 +95,10 @@ body {
   background-color: #60d6ff;
   color: var(--dark-color);
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   padding: 1.2rem;
+  font-size: 1.6rem;
   text-align: center;
 }
 
@@ -122,7 +138,7 @@ body {
 }
 
 .todo-list-activities::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Color of the scrollbar track */
+  background-color: transparent; /* Color of the scrollbar track */
 }
 
 .todo-list-activity {
@@ -135,7 +151,7 @@ body {
   align-items: center;
   padding: 1.2rem;
   color: var(--bright-color);
-  border: 0.5px solid rgba(51, 51, 51, 0.467);
+  border: 0.5px solid #28a9d4;
 }
 
 .todo-list-text {
@@ -144,7 +160,7 @@ body {
 }
 
 .todo-list-text.list-checked {
-  color: red;
+  color: #f4f4f4;
   text-decoration: line-through;
 }
 
@@ -168,6 +184,7 @@ body {
   width: 20px;
   height: 20px;
   background-color: transparent;
+  color: #60d6ff;
   border: none;
 }
 
@@ -187,8 +204,9 @@ body {
 
 .todo-list-edit-button {
   border: none;
-  color: #f3f0ff;
-  background-color: #5f3dc4;
+  color: var(--dark-color);
+  font-family: "Poppins", sans-serif;
+  background-color: #60d6ff;
   padding-inline: 0.8rem;
 }
 
@@ -206,4 +224,5 @@ body {
 
 .check-icon {
   font-size: 2.4rem;
+  color: #60d6ff;
 }
