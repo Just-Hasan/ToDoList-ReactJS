@@ -6,7 +6,6 @@ import {
 } from "react-icons/ri";
 
 /////////////////////////////////////[List Component]
-
 export function List({
   todoItems,
   onDeleteToDoList,

@@ -25,7 +25,7 @@ export default function ListContainer({
       <h1 className="todo-list-title">TodoList</h1>
       <div className="todo-sorting-buttons">
         <p
-          data-value={"all"}
+          data-value="all"
           className="todo-all"
           onClick={(e) => setSortBy(e.target.dataset.value)}
         >

@@ -69,7 +69,7 @@ export default function App() {
           onEditToDoList={handleEditToDoList}
           onHandleClearList={handleClearList}
           onHandleDoneList={handleDoneList}
-        />
+        ></ListContainer>
       </form>
     </div>
   );
