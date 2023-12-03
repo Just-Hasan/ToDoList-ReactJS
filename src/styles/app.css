@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+:root {
+  --bright-color: #60d6ff;
+  --dark-color: #101820;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #1c1c1c;
@@ -20,7 +25,7 @@ body {
   padding: 1.2rem;
 
   width: 500px;
-  background-color: #f4f4f4;
+  background-color: var(--dark-color);
 }
 
 /*
@@ -30,7 +35,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  border: 1px solid #f3f0ff;
 }
 
 .todo-input-field {
@@ -44,16 +48,16 @@ body {
 .todo-list-done-task button {
   border: 1px solid black;
   padding: 1rem;
-  color: #f3f0ff;
+  color: var(--dark-color);
   font-size: 1.6rem;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  background-color: #7950f2;
+  background-color: var(--bright-color);
   cursor: pointer;
 }
 
 .todo-input-button:hover {
-  background-color: #5f3dc4;
+  background-color: #30cbff;
 }
 
 /*
@@ -63,6 +67,7 @@ body {
 .todo-list-title {
   text-align: center;
   margin-bottom: 1.2rem;
+  color: var(--bright-color);
 }
 
 .todo-sorting-buttons {
@@ -73,8 +78,8 @@ body {
 }
 
 .todo-sorting-buttons p {
-  background-color: #7950f2;
-  color: #f3f0ff;
+  background-color: #60d6ff;
+  color: var(--dark-color);
   border: none;
   cursor: pointer;
   padding: 1.2rem;
@@ -82,7 +87,7 @@ body {
 }
 
 .todo-sorting-buttons p:hover {
-  background-color: #5f3dc4;
+  background-color: #30cbff;
 }
 
 .todo-list-activities {
@@ -129,6 +134,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
+  color: var(--bright-color);
   border: 0.5px solid rgba(51, 51, 51, 0.467);
 }
 
@@ -161,7 +167,7 @@ body {
 .todo-edit-complete {
   width: 20px;
   height: 20px;
-  background-color: #f4f4f4;
+  background-color: transparent;
   border: none;
 }
 
