@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { List } from "./List";
+import List from "./List";
 
 /////////////////////////////////////[List Container Component]
 export default function ListContainer({
   todo,
-  onDeleteToDoList,
-  onCheckToDoList,
-  onEditToDoList,
   onHandleClearList,
   onHandleDoneList,
 }) {
@@ -55,13 +52,7 @@ export default function ListContainer({
           <h2>There's nothing here</h2>
         ) : (
           sortedItems.map((todoItems) => (
-            <List
-              todoItems={todoItems}
-              key={todoItems.id}
-              onDeleteToDoList={onDeleteToDoList}
-              onCheckToDoList={onCheckToDoList}
-              onEditToDoList={onEditToDoList}
-            />
+            <List todoItems={todoItems} key={todoItems.id} />
           ))
         )}
       </ul>

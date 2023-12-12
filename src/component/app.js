@@ -1,9 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../styles/app.css";
 
 /////////////////////////////////////[Component]
 import ListContainer from "./ListContainer";
 import Input from "./Input";
+import List from "./List";
+
+/////////////////////////////////////[Context Variable]
+export const AppContext = React.createContext();
 
 export default function App() {
   const [list, setList] = useState("");
@@ -58,19 +62,28 @@ export default function App() {
     setTodo((currentList) => currentList.filter((list) => list.check !== true));
   }
 
+  const contextValues = {
+    list,
+    setList,
+    onDeleteToDoList: handleDeleteToDoList,
+    onCheckToDoList: handleCheckToDoList,
+    onEditToDoList: handleEditToDoList,
+  };
+
   return (
-    <div className="app-container">
-      <form className="to-do-container" onSubmit={handleSubmit}>
-        <Input list={list} setList={setList} />
-        <ListContainer
-          todo={todo}
-          onDeleteToDoList={handleDeleteToDoList}
-          onCheckToDoList={handleCheckToDoList}
-          onEditToDoList={handleEditToDoList}
-          onHandleClearList={handleClearList}
-          onHandleDoneList={handleDoneList}
-        ></ListContainer>
-      </form>
-    </div>
+    <AppContext.Provider value={contextValues}>
+      <div className="app-container">
+        <form className="to-do-container" onSubmit={handleSubmit}>
+          <Input />
+          <ListContainer
+            todo={todo}
+            onHandleClearList={handleClearList}
+            onHandleDoneList={handleDoneList}
+          >
+            <List />
+          </ListContainer>
+        </form>
+      </div>
+    </AppContext.Provider>
   );
 }

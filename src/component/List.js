@@ -1,19 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LuPencil, LuTrash } from "react-icons/lu";
 import {
   RiCheckboxBlankCircleLine,
   RiCheckboxCircleFill,
 } from "react-icons/ri";
 
+import { AppContext } from "./app";
 /////////////////////////////////////[List Component]
-export function List({
-  todoItems,
-  onDeleteToDoList,
-  onCheckToDoList,
-  onEditToDoList,
-}) {
+export default function List({ todoItems }) {
   const [edit, setEdit] = useState(false);
   const [editText, setEditText] = useState("");
+  const { onCheckToDoList, onDeleteToDoList, onEditToDoList } =
+    useContext(AppContext);
 
   return (
     <li className="todo-list-activity">

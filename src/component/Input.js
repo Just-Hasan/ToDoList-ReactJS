@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { AppContext } from "./app";
 /////////////////////////////////////[Input Component]
-export default function Input({ list, setList }) {
+export default function Input() {
+  const { list, setList } = useContext(AppContext);
   return (
     <div className="todo-input">
       <input

@@ -78,6 +78,10 @@ body {
 /////////////////////////////[todo-list]
 */
 
+.todo-list-activities {
+  padding-right: 0.8rem;
+}
+
 .todo-list-title {
   text-align: center;
   margin-bottom: 1.2rem;
@@ -134,7 +138,6 @@ body {
 
 .todo-list-activities::-webkit-scrollbar-thumb {
   background-color: #888; /* Color of the scrollbar thumb */
-  border-radius: 5px; /* Radius of the scrollbar thumb */
 }
 
 .todo-list-activities::-webkit-scrollbar-track {
