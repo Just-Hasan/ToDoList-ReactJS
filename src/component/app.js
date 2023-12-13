@@ -5,7 +5,6 @@ import "../styles/app.css";
 import ListContainer from "./ListContainer";
 import Input from "./Input";
 import List from "./List";
-
 /////////////////////////////////////[Context Variable]
 export const AppContext = React.createContext();
 
